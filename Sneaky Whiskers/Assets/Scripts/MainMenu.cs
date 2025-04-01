@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject panelMainMenu;
     public GameObject panelCreditos;
     public GameObject panelSelector;
+    public GameObject panelAjustes;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class MainMenu : MonoBehaviour
         panelMainMenu.SetActive(true);
         panelCreditos.SetActive(false);
         panelSelector.SetActive(false);
+        panelAjustes.SetActive(false);
     }
 
   public void AbrirCreditos()
@@ -21,13 +23,17 @@ public class MainMenu : MonoBehaviour
         panelMainMenu.SetActive(false);
         panelCreditos.SetActive(true);
         panelSelector.SetActive(false);
+        panelAjustes.SetActive(false);
+
     }
 
-   public void CerrarCreditos()
+    public void CerrarCreditos()
     {
         panelMainMenu.SetActive(true);
         panelCreditos.SetActive(false);
         panelSelector.SetActive(false);
+        panelAjustes.SetActive(false);
+
     }
 
     public void AbrirSelector()
@@ -35,6 +41,8 @@ public class MainMenu : MonoBehaviour
         panelMainMenu.SetActive(false);
         panelCreditos.SetActive(false);
         panelSelector.SetActive(true);
+        panelAjustes.SetActive(false);
+
     }
 
     public void CerrarSelector()
@@ -42,10 +50,30 @@ public class MainMenu : MonoBehaviour
         panelMainMenu.SetActive(true);
         panelCreditos.SetActive(false);
         panelSelector.SetActive(false);
+        panelAjustes.SetActive(false);
+
     }
 
     public void CerrarJuego()
     {
         Application.Quit();
     }
+
+    public void AbrirAjustes()
+    {
+        panelMainMenu.SetActive(true);
+        panelCreditos.SetActive(false);
+        panelSelector.SetActive(false);
+        panelAjustes.SetActive(true);
+    }
+
+    public void CerrarAjustes()
+    {
+        panelMainMenu.SetActive(true);
+        panelCreditos.SetActive(false);
+        panelSelector.SetActive(false);
+        panelAjustes.SetActive(false);
+    }
+
+
 }
